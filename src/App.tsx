@@ -1,6 +1,6 @@
-import './styles.css';
-import MoviePlaylist from './components/MoviePlaylist';
-import SongPlaylist from './components/SongPlaylist';
+import './index.css';
+import MoviePlaylist from './features/playlist/MoviePlaylist';
+// import SongPlaylist from './features/playlist/SongPlaylist';
 
 export default function App() {
 	const handleResetClick = () => {
@@ -15,7 +15,7 @@ export default function App() {
 			<hr />
 			<MoviePlaylist />
 			<hr />
-			<SongPlaylist />
+			{/* <SongPlaylist /> */}
 		</div>
 	);
 }

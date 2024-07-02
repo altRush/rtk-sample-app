@@ -1,4 +1,4 @@
-import { createRandomSong } from '../data';
+import { createRandomSong } from '../../data';
 
 function SongPlaylist() {
 	// To Do:
