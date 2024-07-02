@@ -23,11 +23,15 @@ export const moviePlaylistSlice = createSlice({
 			state.moviePlaylist = state.moviePlaylist.filter(
 				movie => movie !== action.payload
 			);
+		},
+		handleMovieRest: state => {
+			state.moviePlaylist = [];
 		}
 	}
 });
 
 // Action creators are generated for each case reducer function
-export const { handleMovieAdd, handleMovieRemove } = moviePlaylistSlice.actions;
+export const { handleMovieAdd, handleMovieRemove, handleMovieRest } =
+	moviePlaylistSlice.actions;
 
 export default moviePlaylistSlice.reducer;
