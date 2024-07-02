@@ -2,7 +2,8 @@ import './index.css';
 import MoviePlaylist from './features/playlist/MoviePlaylist';
 import { useDispatch } from 'react-redux';
 import { handleMovieRest } from './features/playlist/moviePlaylistSlice';
-// import SongPlaylist from './features/playlist/SongPlaylist';
+import SongPlaylist from './features/playlist/SongPlaylist';
+import { handleSongReset } from './features/playlist/songPlaylistSlice';
 
 export default function App() {
 	const confirmReset = (): boolean => {
@@ -15,6 +16,7 @@ export default function App() {
 		const confirm = confirmReset();
 		if (!confirm) return;
 		dispatch(handleMovieRest());
+		dispatch(handleSongReset());
 	};
 
 	return (
@@ -25,7 +27,7 @@ export default function App() {
 			<hr />
 			<MoviePlaylist />
 			<hr />
-			{/* <SongPlaylist /> */}
+			<SongPlaylist />
 		</div>
 	);
 }
